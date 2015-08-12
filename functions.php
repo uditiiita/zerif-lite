@@ -508,6 +508,13 @@ function ua_zerif_wp_page_menu_should_show_home() {
     return true;
 }
 
+function ua_zerif_wp_show_page_menu_option_li($text, $link, $id) {
+    $setting_val = get_theme_mod($id);
+    if( isset($setting_val) && $setting_val != 1 ):
+        echo "<li><a href='$link'>$text</a></li>";
+    endif;
+}
+
 function zerif_wp_page_menu()
 {
 
@@ -516,6 +523,12 @@ function zerif_wp_page_menu()
     if(ua_zerif_wp_page_menu_should_show_home()) {
         echo '<li><a href="#home">Home</a></li>';
     }
+    ua_zerif_wp_show_page_menu_option_li("Focus", "#focus", "zerif_ourfocus_show");
+    ua_zerif_wp_show_page_menu_option_li("About Us", "#aboutus", "zerif_aboutus_show");
+    ua_zerif_wp_show_page_menu_option_li("Team", "#team", "zerif_ourteam_show");
+    ua_zerif_wp_show_page_menu_option_li("Testimonials", "#testimonials", "zerif_testimonials_show");
+    ua_zerif_wp_show_page_menu_option_li("Focus", "#focus", "zerif_latestnews_show");
+    ua_zerif_wp_show_page_menu_option_li("Contact", "#contact", "zerif_contactus_show");
     wp_list_pages(array('title_li' => '', 'depth' => 1));
 
     echo '</ul>';
