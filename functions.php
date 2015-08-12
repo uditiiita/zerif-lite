@@ -503,11 +503,19 @@ function zerif_register_required_plugins()
 
 require get_template_directory() . '/inc/jetpack.php';
 
+function ua_zerif_wp_page_menu_should_show_home() {
+    //FIXME: Get this value from configuration
+    return true;
+}
+
 function zerif_wp_page_menu()
 {
 
     echo '<ul class="nav navbar-nav navbar-right responsive-nav main-nav-list">';
 
+    if(ua_zerif_wp_page_menu_should_show_home()) {
+        echo '<li><a href="#home">Home</a></li>';
+    }
     wp_list_pages(array('title_li' => '', 'depth' => 1));
 
     echo '</ul>';
