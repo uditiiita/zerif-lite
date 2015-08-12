@@ -763,6 +763,16 @@ class zerif_ourfocus extends WP_Widget
 
 /***************************/
 
+function ua_zerif_wp_quote_color() {
+    $day = date("d");
+    $colors = array("red", "blue", "green", "yellow");
+    $color_number = $day % count($colors);
+    return $colors[$color_number];
+}
+
+function ua_zerif_wp_quote_color_text_class() {
+    return ua_zerif_wp_quote_color()."-text";
+}
 
 add_action('customize_controls_print_scripts', 'zerif_testimonial_widget_scripts');
 
@@ -817,11 +827,8 @@ class zerif_testimonial_widget extends WP_Widget
             <!-- CLIENT INFORMATION -->
 
             <div class="client">
-
-                <div class="quote red-text">
-
-                    <i class="icon-fontawesome-webfont-294"></i>
-
+                <div class="quote <?php echo ua_zerif_wp_quote_color_text_class();?>">
+                    <i class="fa fa-quote-left"></i>
                 </div>
 
                 <div class="client-info">
