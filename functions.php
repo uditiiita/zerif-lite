@@ -582,7 +582,7 @@ function zerif_register_widgets()
 /************************/
 
 
-add_action('customize_controls_print_scripts', 'zerif_ourfocus_widget_scripts');
+add_action('admin_enqueue_scripts', 'zerif_ourfocus_widget_scripts');
 
 function zerif_ourfocus_widget_scripts()
 {
@@ -774,7 +774,7 @@ function ua_zerif_wp_quote_color_text_class() {
     return ua_zerif_wp_quote_color()."-text";
 }
 
-add_action('customize_controls_print_scripts', 'zerif_testimonial_widget_scripts');
+add_action('admin_enqueue_scripts', 'zerif_testimonial_widget_scripts');
 
 function zerif_testimonial_widget_scripts()
 {
@@ -988,7 +988,7 @@ class zerif_testimonial_widget extends WP_Widget
 /***************************/
 
 
-add_action('customize_controls_print_scripts', 'zerif_clients_widget_scripts');
+add_action('admin_enqueue_scripts', 'zerif_clients_widget_scripts');
 
 function zerif_clients_widget_scripts()
 {
@@ -1118,7 +1118,7 @@ class zerif_clients_widget extends WP_Widget
 /***************************/
 
 
-add_action('customize_controls_print_scripts', 'zerif_team_widget_scripts');
+add_action('admin_enqueue_scripts', 'zerif_team_widget_scripts');
 
 function zerif_team_widget_scripts()
 {

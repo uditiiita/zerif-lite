@@ -16,7 +16,7 @@
 
 ?>
 
-
+	</div><!-- .site-content -->
 
 <footer id="footer">
 
@@ -142,8 +142,7 @@
 					endif;
 					
 					echo '</div>';
-			
-		endif;
+        endif;
 	?>
 
 </div> <!-- / END CONTAINER -->
