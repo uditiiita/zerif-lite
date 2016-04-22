@@ -915,7 +915,7 @@ class zerif_clients_widget extends WP_Widget{
 
         extract($args);
 
-//        echo $before_widget;
+        echo $before_widget;
 
         ?>
 
@@ -939,7 +939,7 @@ class zerif_clients_widget extends WP_Widget{
 
         <?php
 
-//        echo $after_widget;
+        echo $after_widget;
 
     }
 
@@ -1011,7 +1011,7 @@ class zerif_team_widget extends WP_Widget{
 
         extract($args);
 
-//        echo $before_widget;
+        echo $before_widget;
 
         ?>
 
@@ -1113,7 +1113,7 @@ class zerif_team_widget extends WP_Widget{
 
         <?php
 
-//        echo $after_widget;
+        echo $after_widget;
 
     }
 
