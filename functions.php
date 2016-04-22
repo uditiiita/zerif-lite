@@ -358,8 +358,6 @@ function ua_zerif_wp_show_page_menu_option_li($text, $link, $id) {
     endif;
 }
 
-function zerif_wp_page_menu()
-{
 function zerif_wp_page_menu() {
 
 	echo '<ul class="nav navbar-nav navbar-right responsive-nav main-nav-list">';
