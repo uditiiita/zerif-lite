@@ -1,16 +1,4 @@
-<?php
-
-/**
-
- * @package zerif
-
- */
-
-?>
-
-
-
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemtype="http://schema.org/BlogPosting" itemtype="http://schema.org/BlogPosting">
 
 	<?php if ( ! is_search() ) : ?>
 
@@ -46,8 +34,6 @@
 
 		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
-
-
 		<?php if ( 'post' == get_post_type() ) : ?>
 
 		<div class="entry-meta">
@@ -60,30 +46,25 @@
 
 	</header><!-- .entry-header -->
 
-
-
 	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
 
 	<div class="entry-summary">
 
 		<?php the_excerpt(); ?>
-
-
-
+		
 	<?php else : ?>
 
 	<div class="entry-content">
 
 		<?php 
+			$ismore = @strpos( $post->post_content, '<!--more-->');
 
-			the_excerpt()
-
-			//the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'zerif-lite' ) ); 
-
-		?>
-
-		<?php
-
+			if($ismore) {
+				the_content( sprintf( esc_html__('[...]','zerif-lite'), '<span class="screen-reader-text">'.esc_html__('about ', 'zerif-lite').get_the_title().'</span>' ) );
+			} else {
+				the_excerpt();
+			}
+			
 			wp_link_pages( array(
 
 				'before' => '<div class="page-links">' . __( 'Pages:', 'zerif-lite' ),
@@ -92,12 +73,7 @@
 
 			) );
 
-		?>
-
-
-	<?php endif; ?>
-
-
+		endif; ?>
 
 	<footer class="entry-footer">
 
@@ -106,7 +82,6 @@
 			<?php
 
 				/* translators: used between list items, there is a space after the comma */
-
 				$categories_list = get_the_category_list( __( ', ', 'zerif-lite' ) );
 
 				if ( $categories_list && zerif_categorized_blog() ) :
@@ -120,8 +95,6 @@
 			</span>
 
 			<?php endif; // End if categories ?>
-
-
 
 			<?php
 
@@ -143,33 +116,20 @@
 
 		<?php endif; // End if 'post' == get_post_type() ?>
 
-
-
 		<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
 
 		<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'zerif-lite' ), __( '1 Comment', 'zerif-lite' ), __( '% Comments', 'zerif-lite' ) ); ?></span>
 
 		<?php endif; ?>
 
-
-
 		<?php edit_post_link( __( 'Edit', 'zerif-lite' ), '<span class="edit-link">', '</span>' ); ?>
 
 	</footer><!-- .entry-footer -->
-
 
 	</div><!-- .entry-content --><!-- .entry-summary -->
 
 	</div><!-- .list-post-top -->
 
-
 </div><!-- .listpost-content-wrap -->
 
 </article><!-- #post-## -->
-
-
-
-
-
-
-

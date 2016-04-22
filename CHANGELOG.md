@@ -1,5 +1,205 @@
 
 
+### 1.8.3.9 - 29/03/2016
+
+ Changes: 
+
+
+ * Fixed
+ * Fixed #145 #290 Added support for cyrillic fonts
+ * Option to change the template page to full width site-wide #314
+ * Option to have an active home link in the menu #321
+ * Fixed #145 #290 Added option to use safe font
+ * Fixed #320 Reviews stars issue with latest Woocommerce
+ * Fixed uploading images within Our Focus widgets notworking with Page Builder #324
+ * Fixed uploading images within Our Team widgets not working with Page Builder #324
+ * Fixed uploading images within Testimonials and Clients widgets not working with Page Builder #324
+ * Replace not existing doc with new one #322
+
+
+### 1.8.3.7 - 16/03/2016
+
+ Changes: 
+
+
+ * Merge pull request #311 from abaicus/development
+
+!!!Changed CSS selector to more specific ones. Edits added to #309.
+ * Fixed layout issue with pirate forms #313
+ * Fixed google webmaster structure data #187
+ * Fixed small issue with Pirate Forms plugin
+
+
+### 1.8.3.6 - 09/03/2016
+
+ Changes: 
+
+
+ * Added hooks to the theme, using plugin API.
+ * Merge pull request #299 from HardeepAsrani/development
+
+Added hooks to the theme, using plugin API.
+ * #293 New template for a fullwidth page with no title
+ * Merge pull request #309 from abaicus/development
+
+!!!Restyled Contribute tab and fixed responsive and scroll issues.
+
+
+### 1.8.3.4 - 22/01/2016
+
+ Changes: 
+
+
+ * Fixed #276 WP MegaMenu compatible
+ * Fixed #286 Center testimonial setion
+ * Fixed #277 Small issue with search submit in chrome mobile
+ * Fixed #291 Footer messed up when one option is missing
+ * Fixed #289 Syntax error in smooth scroll function
+ * Fixed #287, more tag in latest news section and blog
+
+
+### 1.8.3.3 - 14/01/2016
+
+ Changes: 
+
+
+ * #279, fixed escaping errors from 1.8.3.2 version
+
+
+### 1.8.3.2 - 07/01/2016
+
+ Changes: 
+
+
+ * Escaping.
+ * I added wp_kses_post() function instead esc_html.
+ * Fixed #274 Broken footer
+ * About us section escaping fixed.
+ * Merge pull request #268 from robciucioan/development
+
+Escaping.
+ * Added an option for instagram link in footer
+ * #273 Transport option in customize for live preview changes
+ * #272, Improved user interaction in Customize, by using better descriptions and names
+
+
+### 1.8.3.1 - 14/12/2015
+
+ Changes: 
+
+
+ * Fixed #259, underline selected category item in menu
+
+
+### 1.8.3.0 - 27/11/2015
+
+ Changes: 
+
+
+ * git status! EDD style
+ * Fixed #191 Printing style
+ * Fixed #191 Printing style
+
+
+### 1.8.2.9 - 19/11/2015
+
+ Changes: 
+
+
+ * Menu levels issue
+ * Fixed #237, page templates for static page
+
+
+### 1.8.2.8 - 11/11/2015
+
+ Changes: 
+
+
+ * fixed backward compatibility for wp_title()
+
+
+### 1.8.2.7 - 11/11/2015
+
+ Changes: 
+
+
+ * Merge pull request #1 from Codeinwp/development
+
+Development
+ * Fixes issue with Open New Window in Our Team
+
+Checks if there's a value. Fixes:
+https://github.com/Codeinwp/zerif-lite/issues/241
+ * Merge pull request #242 from HardeepAsrani/development
+
+ Fixes issue with Open New Window in Our Team
+ * Fixed #244 Variable product label not visible
+ * Fixed #159 Content too close to headline
+ * Fixed #243 Problem with underlined large title on Firefox
+ * Fixed #247 Background image on mobile
+
+
+### 1.8.2.6 - 27/10/2015
+
+ Changes: 
+
+
+ * Fixed #229, recommend Revive Old Post
+ * Polish translations
+ * Create wpglobus-config.json
+
+Configuration file for multilingual Customizer with WPGlobus.
+See http://www.wpglobus.com/documentation/how-to-translate-strings-in-wordpress-customizer/
+ * Merge pull request #233 from tivnet/patch-1
+
+Create wpglobus-config.json
+
+
+### 1.8.2.5 - 20/10/2015
+
+ Changes: 
+
+
+ * Fixed #224, error with TGM and MaxGalleria plugin
+ * Updated .pot file , plus romanian and spanish translations
+
+
+### 1.8.2.4 - 14/10/2015
+
+ Changes: 
+
+
+ * Update style.css
+ * Merge pull request #173 from gdarko/patch-2
+
+Typo
+ * Fixed documentation, support .. buttons in Customizer for WP 4.3
+ * Fixed #116, contact form sending mails to spam folder
+ * Fixed #172 Add optional parallax effect
+ * Fixed #172 Parallax effect issue
+ * Fixed #172 Parallax effect mobile issue
+ * Fixed #172 Optimized images
+ * Fixed #172 Image license
+ * Fixed #170 Mansory effect for testimonials
+ * Fixed #170 Mansory effect issue
+ * Fixed #170 Masonry effect testimonials issue
+ * Fixed #170 Masonry effect testimonials issue
+ * Fixed #176 BBpress style
+ * Fixed #180, Notice The called constructor method for WP_Widget is deprecated since version 4.3.0
+ * Zerif Lite Welcome page
+ * Fixed #175, green button label in customizer
+ * accessibility modification
+ * accessility modification (remove code in footer.php)
+ * accessility modification : add alternative text for image in backoffice
+ * accessility modification : checkbox to enable accessibility. Used to not open some links in a new tab
+ * Merge branch 'TonyArchambeau-master' into development
+ * accessility modification : add some translated sentances + adapt keyboard navigation for child link in menu
+ * Merge branch 'TonyArchambeau-master' into development
+ * Fixed #195, Accesibility ready tag
+ * Fixed #186, moved widgets inside corresponding sections in customizer for easier use
+ * Removed unused files and optimized images for child themes
+
+
 ### 1.8.2.3 - 24/07/2015
 
  Changes: 
